@@ -1,0 +1,30 @@
+/* Container for the entire cards section */
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Align cards in the center */
+    padding: 20px;
+  }
+  
+  /* Individual card styling */
+  .cardsContainer .card {
+    flex: 1 1 300px; /* Cards can grow and shrink with a base width of 300px */
+    max-width: 350px; /* Set a maximum width for the cards */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for individual cards */
+  .cardsContainer .card:hover {
+    transform: translateY(-10px); /* Add hover effect to lift cards slightly */
+  }
+  
+  /* Responsive design for small devices */
+  @media (max-width: 768px) {
+    .cardsContainer .card {
+      flex: 1 1 100%; /* On smaller screens, make the cards full width */
+      max-width: 100%;
+    }
+  }
+  
