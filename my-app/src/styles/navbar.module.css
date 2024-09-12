@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  background-color: #f1f3f5;
+  background-color: #ffffff;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -10,6 +10,7 @@
   left: 0;
   z-index: 1000;
   gap: 200px;
+  border: 3px solid #e7ebf0;
 }
 
 .navMenu {

@@ -16,19 +16,11 @@ export default function User() {
 
   useEffect(() => {
     // fetch data from an API
-    fetch(`${API_URL}/api/users`)
+    fetch(`${API_URL}/api/getUsers?q=${searchQuery}`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Data:", data);
-        const filteredUsers = data.filter(
-          (user) =>
-            user.first_name === searchQuery ||
-            user.last_name === searchQuery ||
-            user.city === searchQuery ||
-            user.contact_number === searchQuery
-        );
-        console.log("Filtered Users:", filteredUsers);
-        setUsersData(filteredUsers);
+        setUsersData(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
