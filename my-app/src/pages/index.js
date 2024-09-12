@@ -10,7 +10,7 @@ import styles from "@/styles/home.module.css";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar isHomepage={true} />
       <div className={styles.container}>
         <div className={styles.content}>
           <main className={styles.mainSection}>
