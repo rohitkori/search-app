@@ -1,8 +1,7 @@
-import { Input } from "@/components/ui/input";
 import Navbar from "@/components/navbar";
+import SearchBar from "@/components/searchBar";
 
-import { Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 
 // Import the CSS module
@@ -29,14 +28,7 @@ export default function Home() {
                 height={100}
               />
             </div>
-            <div className={styles.searchBarContainer}>
-              <Search className={styles.searchIcon} />
-              <input
-                className={styles.searchInput}
-                type="text"
-                placeholder="Search..."
-              />
-            </div>
+          <SearchBar />
           </main>
         </div>
       </div>

@@ -1,0 +1,33 @@
+/* Search bar container */
+.searchBarContainer {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto; /* Center the search bar horizontally */
+}
+
+/* Search icon styling */
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af; /* Matches the gray color of the search icon */
+}
+
+/* Search input field styling */
+.searchInput {
+  padding-left: 2.5rem; /* Space for the search icon */
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  border: 1px solid #e5e7eb; /* Light border */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); /* Blue shadow on focus */
+}
