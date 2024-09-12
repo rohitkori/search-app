@@ -1,0 +1,72 @@
+.navbar {
+    width: 100%;
+    background-color: #dedfe0; /* Dark background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .nav-menu-list {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-trigger {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-trigger:hover {
+    background-color: #334155;
+    border-radius: 4px;
+  }
+  
+  .nav-content {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #334155; /* Darker dropdown background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+  }
+  
+  .nav-item:hover .nav-content {
+    display: block; /* Show dropdown on hover */
+  }
+  
+  .nav-link {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #475569; /* Hover state for links */
+    border-radius: 4px;
+  }
+  
+  /* center align this div both horizontally and vertically */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10%;
+  }
