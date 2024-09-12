@@ -14,7 +14,7 @@ export default function SearchBar() {
     event.preventDefault(); // Prevent the page from reloading
     console.log("Search Query:", searchQuery);
     // You can redirect or perform any action based on the search query
-    router.push(`/user?query=${searchQuery}`);
+    router.push(`/user/${searchQuery}`);
   };
 
   return (

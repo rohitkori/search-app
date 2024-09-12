@@ -6,6 +6,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import Image from "next/image";
 
 import styles from "@/styles/navbar.module.css";
 
@@ -13,24 +14,14 @@ export default function Navbar() {
   return (
     <>
       <header className={styles.navbar}>
-        <NavigationMenu>
+        <NavigationMenu className={styles.navMenu}>
           <NavigationMenuList className={styles.navMenuList}>
-            <NavigationMenuItem className={styles.navItem}>
-              <a href="/">Home</a>
-            </NavigationMenuItem>
-            <NavigationMenuItem className={styles.navItem}>
-              <a href="/cards">Cards</a>
-              {/* <NavigationMenuTrigger className={styles.navTrigger}>
-                Item Two
-              </NavigationMenuTrigger>
-              <NavigationMenuContent className={styles.navContent}>
-                <NavigationMenuLink className={styles.navLink}>
-                  Link 3
-                </NavigationMenuLink>
-                <NavigationMenuLink className={styles.navLink}>
-                  Link 4
-                </NavigationMenuLink>
-              </NavigationMenuContent> */}
+            <Image src="/Logo.svg" alt="Girman Logo" className={styles.navMenuItemImage} width={150} height={50} />
+            <NavigationMenuItem className={styles.navMenuItem}>
+              <NavigationMenuLink href="/" className={styles.navMenuItemLink}>SEARCH</NavigationMenuLink>
+              <NavigationMenuLink href="/services" className={styles.navMenuItemLink}>WEBSITE</NavigationMenuLink>
+              <NavigationMenuLink href="/about" className={styles.navMenuItemLink}>LINKEDIN</NavigationMenuLink>
+              <NavigationMenuLink href="/contact" className={styles.navMenuItemLink}>CONTACT</NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
