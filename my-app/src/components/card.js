@@ -1,8 +1,23 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, MapPin } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Phone, MapPin } from "lucide-react";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+} from "@/components/ui/dialog";
 
 export default function UserCard({ user }) {
   return (
@@ -10,7 +25,7 @@ export default function UserCard({ user }) {
       <CardHeader className="text-center">
         <div className="flex justify-center">
           <img
-            src = "profilePic.png" // using default profile picture
+            src="profilePic.png" // using default profile picture
             alt={`${user.first_name} ${user.last_name}`}
             className="w-16 h-16 rounded-full object-cover"
           />
@@ -35,7 +50,34 @@ export default function UserCard({ user }) {
             <p className="text-xs text-gray-400">Available on phone</p>
           </div>
         </div>
-        <Button className="bg-black text-white">Fetch Details</Button>
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button className="bg-black text-white">Fetch Details</Button>
+          </DialogTrigger>
+          <DialogContent className="bg-white text-black">
+            <DialogHeader>
+              <DialogTitle>Fetch Details</DialogTitle>
+              <DialogDescription>
+                Here are the details of following employee.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex flex-col">
+              <span>
+                Name: {user.first_name} {user.last_name}
+              </span>
+              <span>Location: {user.city}</span>
+              <span>Contact Number: {user.contact_number}</span>
+              <span>
+                Profile Image:{" "}
+                <img src="profilePic.png" alt="Profile Picture" />
+              </span>
+            </div>
+            <DialogFooter>
+              <Button type="submit">Close</Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </CardFooter>
     </Card>
   );
