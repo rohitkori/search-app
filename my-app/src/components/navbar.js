@@ -23,9 +23,9 @@ export default function Navbar({isHomepage}) {
             </a>
             {isHomepage ? (<NavigationMenuItem className={styles.navMenuItem}>
               <NavigationMenuLink href="/" className={styles.navMenuItemLink}>SEARCH</NavigationMenuLink>
-              <NavigationMenuLink href="/services" className={styles.navMenuItemLink}>WEBSITE</NavigationMenuLink>
-              <NavigationMenuLink href="/about" className={styles.navMenuItemLink}>LINKEDIN</NavigationMenuLink>
-              <NavigationMenuLink href="/contact" className={styles.navMenuItemLink}>CONTACT</NavigationMenuLink>
+              <NavigationMenuLink href="https://girmantech.com" className={styles.navMenuItemLink}>WEBSITE</NavigationMenuLink>
+              <NavigationMenuLink href="https://www.linkedin.com/company/girmantech/posts/?feedView=all" className={styles.navMenuItemLink}>LINKEDIN</NavigationMenuLink>
+              <NavigationMenuLink href="mailto:contact@girmantech.com" className={styles.navMenuItemLink}>CONTACT</NavigationMenuLink>
             </NavigationMenuItem>): (<SearchBar />)}
             
           </NavigationMenuList>

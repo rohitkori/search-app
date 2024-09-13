@@ -12,20 +12,24 @@ export default function Home() {
     <>
       <Navbar isHomepage={true} />
       <div className={styles.container}>
+        <div className={styles.containerImage}>
+        </div>
         <div className={styles.content}>
           <main className={styles.mainSection}>
             <div className={styles.logoSection}>
               <Image
                 src="/Group 1.svg"
                 alt="Girman Logo"
-                width={100}
-                height={50}
+                width={500}
+                height={500}
+                className={styles.logo}
               />
               <Image
                 src="/Girman.svg"
                 alt="Girman SVG Logo"
-                width={200}
-                height={100}
+                width={400}
+                height={200}
+                className={styles.logo}
               />
             </div>
           <SearchBar />
