@@ -18,12 +18,14 @@ export default function User() {
 
   useEffect(() => {
     // fetch data from an API
-    fetch("/api/getUsers?q=${searchQuery}")
+    fetch(`/api/getUsers?q=${searchQuery}`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Data:", data);
         if (data.length === 0) {
           setIsNull(true);
+        } else {
+          setIsNull(false);
         }
         setUsersData(data);
       })
