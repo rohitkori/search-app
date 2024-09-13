@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import API_URL from "@/components/config";
 
 import UserCard from "@/components/card";
 import Navbar from "@/components/navbar";
@@ -19,7 +18,7 @@ export default function User() {
 
   useEffect(() => {
     // fetch data from an API
-    fetch(`${API_URL}/api/getUsers?q=${searchQuery}`)
+    fetch("/api/getUsers?q=${searchQuery}")
       .then((response) => response.json())
       .then((data) => {
         console.log("Data:", data);

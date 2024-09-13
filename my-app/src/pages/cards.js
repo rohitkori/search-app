@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Navbar from "@/components/navbar";
 import UserCard from "@/components/card";
 
-import API_URL from "@/components/config";
 import styles from "@/styles/cards.module.css";
 
 export default function Cards() {
@@ -10,7 +9,7 @@ export default function Cards() {
 
   useEffect(() => {
     // fetch data from an API
-    fetch(`${API_URL}/api/users`)
+    fetch("/api/users")
       .then((response) => response.json())
       .then((data) => setUsersData(data))
       .catch((error) => console.error("Error fetching data:", error));
